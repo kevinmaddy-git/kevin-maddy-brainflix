@@ -1,1 +1,8 @@
-/*# sourceMappingURL=App.css.map */
+@font-face {
+  font-family: "Avenir-Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}/*# sourceMappingURL=App.css.map */
