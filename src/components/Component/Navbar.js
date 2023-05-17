@@ -1,11 +1,10 @@
 import React from "react";
 import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
 import user from "../../assets/images/Mohan-muruge.jpg";
-import eyeglass from "../../assets/images/Icons/search.svg";
 import arrow from "../../assets/images/Icons/upload.svg";
 import "./Navbar.scss";
 
-export default function Navbar() {
+function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo-container">
@@ -32,6 +31,7 @@ export default function Navbar() {
   );
 }
 
+export default Navbar
 
 
 
