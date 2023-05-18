@@ -6,8 +6,8 @@ import LikeIcon from '../../assets/images/Icons/likes.svg';
 function HeroDetails({ currentVideo }) {
   const date = new Date(currentVideo.timestamp);
   const timeConversion = date.toLocaleDateString("en-US", {
-    month: "numeric",
-    day: "numeric",
+    month: "2-digit",
+    day: "2-digit",
     year: "numeric"
   });
 
