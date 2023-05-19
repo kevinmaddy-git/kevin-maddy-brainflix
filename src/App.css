@@ -5,4 +5,7 @@
 @font-face {
   font-family: "Avenir-Bold";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+button {
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

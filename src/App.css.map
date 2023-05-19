@@ -1,1 +1,1 @@
-{"version":3,"sources":["styles/partials/_font.scss","App.css"],"names":[],"mappings":"AAAA;EACI,6BAAA;EACA,0DAAA;ACCJ;ADEA;EACI,0BAAA;EACA,uDAAA;ACAJ","file":"App.css"}
+{"version":3,"sources":["styles/partials/_font.scss","App.css","App.scss"],"names":[],"mappings":"AAAA;EACI,6BAAA;EACA,0DAAA;ACCJ;ADEA;EACI,0BAAA;EACA,uDAAA;ACAJ;ACLA;EACI,eAAA;ADOJ","file":"App.css"}

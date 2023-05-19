@@ -71,13 +71,6 @@
     border-radius: 50%;
   }
 
-  &__container {
-    &-img {
-      border-bottom: solid .15rem $color-mercury;
-      margin-bottom: 1rem;
-    }
-  }
-
   @include tablet {
     .comment {
       margin: 0;

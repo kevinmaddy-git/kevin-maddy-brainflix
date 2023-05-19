@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Component/CommentsSection.scss';
+import './CommentsSection.scss';
 
 function formatDate(timestamp) {
   const dateObj = new Date(timestamp);
@@ -21,22 +21,25 @@ function CommentsSection({ currentVideo }) {
   );
 
   return (
-    <div className="comments">
+    <div className="comment">
       {/* Render comments */}
       {existingComments.map((comment) => (
-        <div key={comment.id} className="comments__container">
-          <div className="comments__container-img"></div>
-          <div className="comments__container-content">
-            <span className="comments__container-content-name">{comment.name}</span>
-            <span className="comments__container-content-timestamp">
-              {formatDate(comment.timestamp)}
-            </span>
-            <p className="comments__container-content-comment">{comment.comment}</p>
+        <div key={comment.id} className="comment__container">
+          <div className="comment__container-content">
+            <div className="comment__container-content-header">
+              <span className="comment__container-content-name">{comment.name}</span>
+              <span className="comment__container-content-timestamp">
+                {formatDate(comment.timestamp)}
+              </span>
+            </div>
+            <p className="comment__container-content-comment">{comment.comment}</p>
           </div>
         </div>
       ))}
     </div>
   );
+  
+  
 }
 
 export default CommentsSection;

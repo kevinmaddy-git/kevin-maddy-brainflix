@@ -62,10 +62,6 @@
   background-image: url(../../assets/images/Mohan-muruge.jpg);
   border-radius: 50%;
 }
-.comment__container-img {
-  border-bottom: solid 0.15rem #e1e1e1;
-  margin-bottom: 1rem;
-}
 @media screen and (min-width: 768px) {
   .comment .comment {
     margin: 0;
