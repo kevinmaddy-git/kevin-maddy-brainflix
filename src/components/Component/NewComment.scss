@@ -6,6 +6,50 @@
   flex-direction: column;
   margin: 1rem;
 
+  @include desktop {
+    border-right: solid .15rem $color-mercury;
+    max-width: 70vw;
+
+    &__form-input {
+      height: 3rem;
+      width: 40vw;
+      padding: .75rem 1rem;
+      margin-right: 1rem;
+      z-index: 2;
+    }
+
+    &__form-tablet {
+      max-width: 70vw;
+    }
+
+    &__form-button {
+      width: 10vw;
+      justify-content: center;
+      margin-right: 1rem;
+      margin-left: 2rem;
+      margin-top: -2.8rem;
+      margin-bottom: 1rem;
+      padding-right: 1rem;
+      z-index: 2;
+    }
+
+    &__form-buttonIcon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      padding-right: 1.5rem;
+      padding-bottom: .25rem;
+    }
+
+    &__form-tablet {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   &__form {
     margin-bottom: 1rem;
     display: flex;
@@ -51,6 +95,9 @@
     color: $color-white;
     margin-left: 15vw;
     margin-top: 0;
+  }
+  .comment__form-button:hover {
+    background-color: $color-brainflix-darkblue;
   }
 
   &__form-buttonIcon {
@@ -110,44 +157,6 @@
         margin: 0;
         padding: 0;
       }
-    }
-  }
-
-  @include desktop {
-    max-width: 70vw;
-
-    &__form-input {
-      height: 3rem;
-      width: 40vw;
-      padding: .75rem 1rem;
-    }
-    &__form-tablet {
-        max-width: 70vw;
-    }
-
-    &__form-button {
-      width: 10vw;
-      justify-content: center;
-      margin-left: 2rem;
-      margin-top: -2.8rem;
-      margin-bottom: 1rem;
-      padding-right: 1rem;
-    }
-
-    &__form-buttonIcon {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 0;
-      padding-right: 1.5rem;
-      padding-bottom: .25rem;
-    }
-
-    &__form-tablet {
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
     }
   }
 }

@@ -3,6 +3,46 @@
   flex-direction: column;
   margin: 1rem;
 }
+@media screen and (min-width: 1280px) {
+  .comment {
+    border-right: solid 0.15rem #e1e1e1;
+    max-width: 70vw;
+  }
+  .comment__form-input {
+    height: 3rem;
+    width: 40vw;
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    z-index: 2;
+  }
+  .comment__form-tablet {
+    max-width: 70vw;
+  }
+  .comment__form-button {
+    width: 10vw;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-top: -2.8rem;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+    z-index: 2;
+  }
+  .comment__form-buttonIcon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding-right: 1.5rem;
+    padding-bottom: 0.25rem;
+  }
+  .comment__form-tablet {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+}
 .comment__form {
   margin-bottom: 1rem;
   display: flex;
@@ -45,6 +85,9 @@
   color: #ffffff;
   margin-left: 15vw;
   margin-top: 0;
+}
+.comment .comment__form-button:hover {
+  background-color: #0065ad;
 }
 .comment__form-buttonIcon {
   display: flex;
@@ -92,41 +135,6 @@
     padding-bottom: 0.25rem;
   }
   .comment .comment__form-tablet {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .comment {
-    max-width: 70vw;
-  }
-  .comment__form-input {
-    height: 3rem;
-    width: 40vw;
-    padding: 0.75rem 1rem;
-  }
-  .comment__form-tablet {
-    max-width: 70vw;
-  }
-  .comment__form-button {
-    width: 10vw;
-    justify-content: center;
-    margin-left: 2rem;
-    margin-top: -2.8rem;
-    margin-bottom: 1rem;
-    padding-right: 1rem;
-  }
-  .comment__form-buttonIcon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    padding-right: 1.5rem;
-    padding-bottom: 0.25rem;
-  }
-  .comment__form-tablet {
     display: flex;
     flex-direction: row;
     margin: 0;

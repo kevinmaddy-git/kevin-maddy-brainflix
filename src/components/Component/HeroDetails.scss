@@ -127,6 +127,23 @@
 
     @include desktop {
         max-width: 70vw;
+        &__container {
+            position: relative;
+        
+            &::after {
+              content: "";
+              position: absolute;
+              top: -6.3rem;
+              bottom: 0;
+              right: 0;
+              width: 0.15rem;
+              height: 50rem;
+              background-color: $color-mercury;
+            }
+          }
+          &__description {
+            padding-right: 1rem;
+          }
         &-info {
             padding-left: 25rem;
         }

@@ -107,6 +107,22 @@
   .heroDetails {
     max-width: 70vw;
   }
+  .heroDetails__container {
+    position: relative;
+  }
+  .heroDetails__container::after {
+    content: "";
+    position: absolute;
+    top: -6.3rem;
+    bottom: 0;
+    right: 0;
+    width: 0.15rem;
+    height: 50rem;
+    background-color: #e1e1e1;
+  }
+  .heroDetails__description {
+    padding-right: 1rem;
+  }
   .heroDetails-info {
     padding-left: 25rem;
   }
