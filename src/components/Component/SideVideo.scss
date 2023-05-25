@@ -58,6 +58,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @include desktop {
+            width: 6rem;
+        }
     }
 
     &__description {

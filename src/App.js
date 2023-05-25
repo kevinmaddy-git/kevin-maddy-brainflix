@@ -7,7 +7,6 @@ import HeroDetails from './components/Component/HeroDetails';
 import NewComment from './components/Component/NewComment';
 import CommentsSection from './components/Component/CommentsSection';
 import SideVideoList from './components/Component/SideVideoList';
-import CurrentVideoDetails from './data/video-details.json';
 import VideoData from './data/videos.json';
 
 const fetchVideoData = async () => {

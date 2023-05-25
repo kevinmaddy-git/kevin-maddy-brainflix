@@ -1,9 +1,9 @@
 import React from 'react';
 import './HeroVideo.scss';
-import play from '../../assets/images/Icons/play.svg';
-import scrub from '../../assets/images/Icons/scrub.svg';
-import fullScreen from '../../assets/images/Icons/fullscreen.svg';
-import volumeUp from '../../assets/images/Icons/volume_up.svg';
+// import play from '../../assets/images/Icons/play.svg';
+// import scrub from '../../assets/images/Icons/scrub.svg';
+// import fullScreen from '../../assets/images/Icons/fullscreen.svg';
+// import volumeUp from '../../assets/images/Icons/volume_up.svg';
 
 function HeroVideo({currentVideo}){
     return(
