@@ -1,0 +1,129 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 11rem;
+    margin: 0 1rem;
+    align-items: center;
+
+    &__logo-container {
+        display: flex;
+        margin: 1rem 0;
+    }
+
+    &__logo {
+        height: 2rem;
+    }
+
+    &__search-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__search-input {
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 20rem;
+            height: 2.75rem;
+            border-radius: 0.25rem;
+            border: 0.15rem solid $color-mercury;
+            background-color: $color-alabaster;
+            background-image: url(../../assets/images/Icons/search.svg);
+            background-repeat: no-repeat;
+            background-position: 1rem center;
+            padding-left: 2.5rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__user {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+    &__user2 {
+        display: none;
+    }
+
+    &__upload-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__upload {
+        width: 24rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        border: none;
+        color: white;
+        background-color: $color-brainflix-blue;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        &:hover {
+            background-color: $color-brainflix-darkblue;
+        }
+    }
+
+    &__upload-icon {
+        margin-right: 8rem;
+        margin-left: .5rem;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        height: 5rem;
+
+        &__search-input {
+            margin-right: 0.5rem;
+        }
+
+        input {
+            width: 15rem;
+            height: 3rem;
+            margin-top: 1rem;
+            margin-left: 6rem;
+        }
+
+        &__upload-container {
+            align-items: center;
+            width: 14rem;
+        }
+        &__upload-icon {
+            margin-right: 1.5rem;
+        }
+
+        &__user {
+            display: none;
+        }
+
+        &__user2 {
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            margin-left: 1rem;
+        }
+    }
+    @include desktop {
+        &__logo-container {
+            margin-left: 3rem;
+        }
+        input {
+            margin-left: 25rem;
+        }
+    }
+}
