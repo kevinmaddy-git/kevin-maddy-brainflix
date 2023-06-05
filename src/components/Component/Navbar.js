@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
 import user from "../../assets/images/Mohan-muruge.jpg";
 import arrow from "../../assets/images/Icons/upload.svg";
@@ -8,7 +9,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo-container">
-        <img className="navbar__logo" src={logo} alt="logo" />
+        <Link to="/" className="navbar__logo-link">
+          <img className="navbar__logo" src={logo} alt="logo" />
+        </Link>
       </div>
       <div className="navbar__search-container">
         <div className="navbar__search-input">

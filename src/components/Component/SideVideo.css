@@ -54,6 +54,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 1280px) {
+  .sideVideo__img {
+    width: 6rem;
+  }
+}
 .sideVideo__description {
   display: flex;
   flex-direction: column;

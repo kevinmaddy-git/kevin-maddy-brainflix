@@ -5,16 +5,16 @@ import './HeroVideo.scss';
 // import fullScreen from '../../assets/images/Icons/fullscreen.svg';
 // import volumeUp from '../../assets/images/Icons/volume_up.svg';
 
-function HeroVideo({currentVideo}){
-    return(
+function HeroVideo({ currentVideo }) {
+    return (
         <section className="hero">
             <div className="hero__container">
-                <video className="hero__container-video" controls="play" poster={currentVideo.image} duration={currentVideo.duration}>
-                    <source className='hero__container-video--source' src={currentVideo.video}></source>
+                <video className="hero__container-video" controls poster={currentVideo.image}>
+                    <source className="hero__container-video--source" src={currentVideo.video}></source>
                 </video>
             </div>
         </section>
-    )
+    );
 }
 
 export default HeroVideo;
