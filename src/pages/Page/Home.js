@@ -11,7 +11,7 @@ const fetchVideoData = async () => {
     try {
         const response = await axios.get('https://project-2-api.herokuapp.com/videos', {
             params: {
-                api_key: 'kmbrainflix'
+                api_key: 'f85cab0a-8fe1-4d2e-8b28-8cdfdec2bc3c'
             }
         });
         return response.data;
@@ -23,17 +23,13 @@ const fetchVideoData = async () => {
 
 const fetchCurrentVideoDetails = async (videoId) => {
     try {
-        const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}`, {
-            params: {
-                api_key: 'c0f55fe1-f2c0-41cc-a4dc-aee73a1e899a'
-            }
-        });
-        return response.data;
+      const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f85cab0a-8fe1-4d2e-8b28-8cdfdec2bc3c`);
+      return response.data;
     } catch (error) {
-        console.error('Error fetching current video details:', error);
-        return null;
+      console.error('Error fetching current video details:', error);
+      return null;
     }
-};
+  };
 
 const Home = () => {
     const [currentVideo, setCurrentVideo] = useState(null);
