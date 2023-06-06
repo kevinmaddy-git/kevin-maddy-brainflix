@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import commentIcon from '../../assets/images/Icons/add_comment.svg';
-import './NewComment.scss';
+import commentIcon from '../../../assets/images/Icons/add_comment.svg';
+import '../NewComment/NewComment.scss';
 
 function formatDate(timestamp) {
   const dateObj = new Date(timestamp);

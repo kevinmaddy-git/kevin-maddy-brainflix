@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './CommentsSection.scss';
+import '../CommentsSection/CommentsSection.scss';
 
 function formatDate(timestamp) {
   const dateObj = new Date(timestamp);

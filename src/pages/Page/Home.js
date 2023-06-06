@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../../components/Component/Navbar';
-import HeroVideo from '../../components/Component/HeroVideo';
-import HeroDetails from '../../components/Component/HeroDetails';
-import NewComment from '../../components/Component/NewComment';
-import CommentsSection from '../../components/Component/CommentsSection';
-import SideVideoList from '../../components/Component/SideVideoList';
+import Navbar from '../../components/Component/Navbar/Navbar';
+import HeroVideo from '../../components/Component/HeroVideo/HeroVideo';
+import HeroDetails from '../../components/Component/HeroDetails/HeroDetails';
+import NewComment from '../../components/Component/NewComment/NewComment';
+import CommentsSection from '../../components/Component/CommentsSection/CommentsSection';
+import SideVideoList from '../../components/Component/SideVideo/SideVideoList';
 
 const fetchVideoData = async () => {
     try {

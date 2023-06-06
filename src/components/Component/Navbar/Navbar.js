@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
-import user from "../../assets/images/Mohan-muruge.jpg";
-import arrow from "../../assets/images/Icons/upload.svg";
-import "./Navbar.scss";
+import logo from "../../../assets/images/Logo/BrainFlix-logo.svg";
+import user from "../../../assets/images/Mohan-muruge.jpg";
+import arrow from "../../../assets/images/Icons/upload.svg";
+import "../Navbar/Navbar.scss";
 
 function Navbar() {
   return (

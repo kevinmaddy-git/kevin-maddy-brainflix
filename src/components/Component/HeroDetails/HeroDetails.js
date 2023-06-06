@@ -1,7 +1,7 @@
 import React from 'react';
-import './HeroDetails.scss';
-import ViewIcon from '../../assets/images/Icons/views.svg';
-import LikeIcon from '../../assets/images/Icons/likes.svg';
+import '../HeroDetails/HeroDetails.scss';
+import ViewIcon from '../../../assets/images/Icons/views.svg';
+import LikeIcon from '../../../assets/images/Icons/likes.svg';
 
 function HeroDetails({ currentVideo }) {
   if (!currentVideo) {

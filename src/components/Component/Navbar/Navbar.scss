@@ -1,5 +1,5 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/partials/variables' as *;
 
 * {
     box-sizing: border-box;
@@ -39,7 +39,7 @@
             border-radius: 0.25rem;
             border: 0.15rem solid $color-mercury;
             background-color: $color-alabaster;
-            background-image: url(../../assets/images/Icons/search.svg);
+            background-image: url(../../../assets/images/Icons/search.svg);
             background-repeat: no-repeat;
             background-position: 1rem center;
             padding-left: 2.5rem;
