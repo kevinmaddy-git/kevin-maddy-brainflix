@@ -24,17 +24,20 @@ function Navbar() {
         <img className="navbar__user" src={user} alt="user" />
       </div>
       <div className="navbar__upload-container">
-        <button className="navbar__upload" type="button">
-          <img className="navbar__upload-icon" src={arrow} alt="upload-icon" />
-          UPLOAD
-        </button>
+        <Link to="/upload" className="navbar__upload-link">
+          <button className="navbar__upload" type="button">
+            <img className="navbar__upload-icon" src={arrow} alt="upload-icon" />
+            UPLOAD
+          </button>
+        </Link>
         <img className="navbar__user2" src={user} alt="user" />
       </div>
     </div>
   );
 }
 
-export default Navbar
+export default Navbar;
+
 
 
 

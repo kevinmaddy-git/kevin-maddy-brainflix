@@ -52,6 +52,7 @@
         height: 3rem;
         border-radius: 50%;
     }
+
     &__user2 {
         display: none;
     }
@@ -72,6 +73,10 @@
         display: flex;
         align-items: center;
         text-align: center;
+
+        &-link {
+            text-decoration: none;
+        }
 
         &:hover {
             background-color: $color-brainflix-darkblue;
@@ -102,6 +107,7 @@
             align-items: center;
             width: 14rem;
         }
+
         &__upload-icon {
             margin-right: 1.5rem;
         }
@@ -118,10 +124,12 @@
             margin-left: 1rem;
         }
     }
+
     @include desktop {
         &__logo-container {
             margin-left: 3rem;
         }
+
         input {
             margin-left: 25rem;
         }
