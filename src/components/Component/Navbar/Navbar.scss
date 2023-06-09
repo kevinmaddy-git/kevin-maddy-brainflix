@@ -67,7 +67,7 @@
         height: 3rem;
         border-radius: 0.25rem;
         border: none;
-        color: white;
+        color: $color-white;
         background-color: $color-brainflix-blue;
         font-weight: bold;
         display: flex;
@@ -101,6 +101,10 @@
             height: 3rem;
             margin-top: 1rem;
             margin-left: 6rem;
+        }
+
+        &__upload {
+            width: 10rem;
         }
 
         &__upload-container {

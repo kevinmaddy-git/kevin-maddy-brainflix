@@ -1,5 +1,6 @@
 import React from 'react';
-import uploadIcon from '../../../assets/images/Icons/upload.svg';
+import uploadIcon from '../../../assets/images/Icons/publish.svg';
+import '../Publish/Publish.scss';
 
 function Publish({ history }) {
   const handleCancel = () => {
@@ -7,13 +8,13 @@ function Publish({ history }) {
   };
 
   return (
-    <div>
-      <button className="publish-button">
-        <img className="publish-button__icon" src={uploadIcon} alt="Upload Icon" />
-        Publish
+    <div className='publish'>
+      <button className="publish__button">
+        <img className="publish__button-icon" src={uploadIcon} alt="Upload Icon" />
+        PUBLISH
       </button>
-      <button className="cancel-button" onClick={handleCancel}>
-        Cancel
+      <button className="cancel__button" onClick={handleCancel}>
+        CANCEL
       </button>
     </div>
   );
