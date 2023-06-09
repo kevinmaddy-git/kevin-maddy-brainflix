@@ -15,11 +15,15 @@
     @include tablet {
         margin-top: .5rem;
     }
+    @include desktop {
+        width: 100vw;
+    }
 
     &-text {
         margin-top: 2rem;
         margin-left: 2rem;
         font-family: 'Avenir-Bold';
+        color: $color-brainflix-black;
 
         @include desktop {
             margin-left: 9rem;
@@ -96,7 +100,7 @@
         margin-bottom: 1rem;
         margin-top: -.5rem;
         @include desktop {
-            width: 88%;
+            width: 86.5%;
         }
     }
 
@@ -118,7 +122,7 @@
             height: 7rem;
         }
         @include desktop {
-            width: 88%;
+            width: 86.5%;
             height: 4.5rem;
         }
     }
