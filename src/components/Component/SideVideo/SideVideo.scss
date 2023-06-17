@@ -1,0 +1,85 @@
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/partials/variables' as *;
+
+.sideVideoList {
+    margin-top: -2rem;
+
+    &__header {
+        color: $color-silver;
+        margin: 1rem;
+        border-top: solid .15rem $color-mercury;
+        padding-top: 2rem;
+
+        @include desktop {
+            border-top: none;
+            position: absolute;
+            top: 30rem;
+            margin-left: 73vw;
+        }
+    }
+
+    &__content {
+
+        @include desktop {
+            position: absolute;
+            top: 36rem;
+            margin-left: 72vw;
+        }
+    }
+
+    &__heroDetails {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+
+        @include desktop {
+            flex: 0 0 66.67%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__videos {
+        flex: 0 0 100%;
+
+        @include desktop {
+            flex: 0 0 calc(33.33% - 1rem);
+        }
+    }
+}
+
+.sideVideo {
+    display: flex;
+    margin: 0 1rem;
+    cursor: pointer;
+
+    &__img {
+        width: 8rem;
+        height: 4.5rem;
+        margin-bottom: 1rem;
+        border-radius: 5%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include desktop {
+            width: 6rem;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 12rem;
+        margin-left: 2rem;
+
+        &-title {
+            font-size: 1rem;
+            font-weight: bold;
+            padding-bottom: .75rem;
+        }
+
+        &-channelName {
+            font-size: 1rem;
+            padding-bottom: .5rem;
+        }
+    }
+}
