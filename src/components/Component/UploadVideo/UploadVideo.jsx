@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import thumbnail from "../../../assets/images/Images/Upload-video-preview.jpg";
-import '../UploadVideo/UploadVideo.scss';
+import "../UploadVideo/UploadVideo.scss";
+import Publish from "../Publish/Publish";
 
 function UploadVideo() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleFormSubmit = () => {
+    // Your form submit logic here
+  };
+
   return (
     <div className="video__container">
       <div className="video__info">
@@ -12,13 +20,26 @@ function UploadVideo() {
       </div>
       <div className="video__form">
         <h2 className="video__form-title">TITLE YOUR VIDEO</h2>
-        <input className="video__form-input" type="text" placeholder="Add a title to your video" />
+        <input
+          className="video__form-input"
+          type="text"
+          placeholder="Add a title to your video"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
         <h2 className="video__form-title">ADD A VIDEO DESCRIPTION</h2>
-        <textarea className="video__form-textarea" placeholder="Add a description to your video"></textarea>
+        <textarea
+          className="video__form-textarea"
+          placeholder="Add a description to your video"
+          value={description}
+          onChange={(event) => setDescription(event.target.value)}
+        ></textarea>
       </div>
+      <Publish title={title} description={description} />
     </div>
   );
 }
 
 export default UploadVideo;
+
 

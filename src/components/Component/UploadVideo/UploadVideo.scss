@@ -70,16 +70,16 @@
 .video__form {
     flex: 1;
     margin-left: 2rem;
-
+  
     @include tablet {
-        border-bottom: .15rem solid $color-mercury;
-        width: 90vw;
+      border-bottom: .15rem solid $color-mercury;
+      width: 90vw;
     }
-
+  
     @include desktop {
-        margin-top: 8.5rem;
-        margin-left: -44rem;
-        border-bottom: none;
+      margin-top: 8.5rem;
+      margin-left: -30rem; /* Adjusted value */
+      border-bottom: none;
     }
 
     &-title {
