@@ -13,10 +13,10 @@
         margin-right: .5rem;
     }
     @include desktop {
-        position: relative;
-        margin-top: 30rem;
-        margin-right: 20rem;
+        position: absolute;
         width: 81.5vw;
+        margin-top: 24rem;
+        margin-left: 9rem;
         border-top: .15rem solid $color-mercury;
     }
 
@@ -28,7 +28,7 @@
     color: $color-white;
     background-color: $color-brainflix-blue;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     padding-bottom: .75rem;
     padding-right: 1.5rem;
@@ -69,5 +69,6 @@
     @include desktop {
         display: flex;
         flex-direction: column;
+        margin-left: 48rem;
     }
 }
