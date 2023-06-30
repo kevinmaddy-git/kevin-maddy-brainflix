@@ -44,5 +44,3 @@ function Publish({ title, description }) {
 }
 
 export default Publish;
-
-
