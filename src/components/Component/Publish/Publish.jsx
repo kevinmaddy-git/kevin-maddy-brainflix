@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import uploadIcon from '../../../assets/images/Icons/publish.svg';
 import '../Publish/Publish.scss';
 
 function Publish({ title, description }) {
   const navigate = useNavigate();
 
-  const handleFormSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
     try {
       const response = await fetch('http://localhost:3000/videos', {
         method: 'POST',
@@ -31,15 +33,15 @@ function Publish({ title, description }) {
   };
 
   return (
-    <div className='publish'>
-      <button className="publish__button" onClick={handleFormSubmit}>
+    <form className='publish' onSubmit={handleSubmit}>
+      <button type="submit" className="publish__button">
         <img className="publish__button-icon" src={uploadIcon} alt="Upload Icon" />
         PUBLISH
       </button>
-      <Link to="/" className="cancel__button">
+      <button type="button" className="cancel__button" onClick={() => navigate('/')}>
         CANCEL
-      </Link>
-    </div>
+      </button>
+    </form>
   );
 }
 

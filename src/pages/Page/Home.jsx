@@ -27,17 +27,23 @@ const fetchCurrentVideoDetails = async (videoId) => {
   }
 };
 
+const fetchSideVideos = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/sidevideos');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching side video data:', error);
+    return null;
+  }
+};
+
 const Home = () => {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [videoData, setVideoData] = useState([]);
-
-  const switchVideo = async (videoId) => {
-    const selectedVideo = await fetchCurrentVideoDetails(videoId);
-    setCurrentVideo(selectedVideo);
-  };
+  const [sideVideos, setSideVideos] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMainVideo = async () => {
       const data = await fetchVideoData();
 
       if (data) {
@@ -51,8 +57,26 @@ const Home = () => {
       }
     };
 
-    fetchData();
+    fetchMainVideo();
   }, []);
+
+  useEffect(() => {
+    const fetchSideVideoData = async () => {
+      const sideVideoData = await fetchSideVideos();
+
+      if (sideVideoData) {
+        setSideVideos(sideVideoData);
+      }
+    };
+
+    fetchSideVideoData();
+  }, []);
+
+  const switchVideo = async (videoId) => {
+    const selectedVideo = await fetchCurrentVideoDetails(videoId);
+    setCurrentVideo(selectedVideo);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   if (!currentVideo) {
     return <div>Loading...</div>;
@@ -69,10 +93,10 @@ const Home = () => {
         currentVideoId={currentVideo.id}
         switchCurrentVideo={switchVideo}
         videoData={videoData}
+        sideVideoData={sideVideos}
       />
     </>
   );
 };
 
 export default Home;
-

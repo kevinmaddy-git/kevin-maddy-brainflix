@@ -7,10 +7,6 @@ function UploadVideo() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleFormSubmit = () => {
-    // Your form submit logic here
-  };
-
   return (
     <div className="video__container">
       <div className="video__info">
