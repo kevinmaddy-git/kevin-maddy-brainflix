@@ -29,7 +29,7 @@ const fetchCurrentVideoDetails = async (videoId) => {
 
 const fetchSideVideos = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/sidevideos');
+    const response = await axios.get('http://localhost:3000/videos');
     return response.data;
   } catch (error) {
     console.error('Error fetching side video data:', error);
@@ -78,7 +78,7 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (!currentVideo) {
+  if (!currentVideo || !sideVideos) {
     return <div>Loading...</div>;
   }
 
