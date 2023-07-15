@@ -8,75 +8,95 @@ import CommentsSection from '../../components/Component/CommentsSection/Comments
 import SideVideoList from '../../components/Component/SideVideo/SideVideoList';
 
 const fetchVideoData = async () => {
-    try {
-        const response = await axios.get('https://project-2-api.herokuapp.com/videos', {
-            params: {
-                api_key: 'f85cab0a-8fe1-4d2e-8b28-8cdfdec2bc3c'
-            }
-        });
-        return response.data;
-    } catch (error) {
-        console.error('Error fetching video data:', error);
-        return null;
-    }
+  try {
+    const response = await axios.get('http://localhost:3000/videos');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching video data:', error);
+    return null;
+  }
 };
 
 const fetchCurrentVideoDetails = async (videoId) => {
-    try {
-      const response = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=f85cab0a-8fe1-4d2e-8b28-8cdfdec2bc3c`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching current video details:', error);
-      return null;
-    }
-  };
+  try {
+    const response = await axios.get(`http://localhost:3000/videos/${videoId}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching current video details:', error);
+    return null;
+  }
+};
+
+const fetchSideVideos = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/videos');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching side video data:', error);
+    return null;
+  }
+};
 
 const Home = () => {
-    const [currentVideo, setCurrentVideo] = useState(null);
-    const [videoData, setVideoData] = useState([]);
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [videoData, setVideoData] = useState([]);
+  const [sideVideos, setSideVideos] = useState([]);
 
-    const switchVideo = async (videoId) => {
-        const selectedVideo = await fetchCurrentVideoDetails(videoId);
-        setCurrentVideo(selectedVideo);
+  useEffect(() => {
+    const fetchMainVideo = async () => {
+      const data = await fetchVideoData();
+
+      if (data) {
+        setVideoData(data);
+        const currentVideoId = data[0].id;
+        const currentVideoDetails = await fetchCurrentVideoDetails(currentVideoId);
+
+        if (currentVideoDetails) {
+          setCurrentVideo(currentVideoDetails);
+        }
+      }
     };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await fetchVideoData();
+    fetchMainVideo();
+  }, []);
 
-            if (data) {
-                setVideoData(data);
-                const currentVideoId = data[0].id;
-                const currentVideoDetails = await fetchCurrentVideoDetails(currentVideoId);
+  useEffect(() => {
+    const fetchSideVideoData = async () => {
+      const sideVideoData = await fetchSideVideos();
 
-                if (currentVideoDetails) {
-                    setCurrentVideo(currentVideoDetails);
-                }
-            }
-        };
+      if (sideVideoData) {
+        setSideVideos(sideVideoData);
+      }
+    };
 
-        fetchData();
-    }, []);
+    fetchSideVideoData();
+  }, []);
 
-    if (!currentVideo) {
-        return <div>Loading...</div>;
-    }
+  const switchVideo = async (videoId) => {
+    const selectedVideo = await fetchCurrentVideoDetails(videoId);
+    setCurrentVideo(selectedVideo);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-    return (
-        <>
-            <Navbar />
-            <HeroVideo currentVideo={currentVideo} />
-            <HeroDetails currentVideo={currentVideo} />
-            <NewComment currentVideo={currentVideo} />
-            <CommentsSection currentVideo={currentVideo} />
-            <SideVideoList
-                currentVideoId={currentVideo.id}
-                switchCurrentVideo={switchVideo}
-                videoData={videoData}
-            />
-        </>
-    );
+  if (!currentVideo || !sideVideos) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <>
+      <Navbar />
+      <HeroVideo currentVideo={currentVideo} />
+      <HeroDetails currentVideo={currentVideo} />
+      <NewComment currentVideo={currentVideo} />
+      <CommentsSection currentVideo={currentVideo} />
+      <SideVideoList
+        currentVideoId={currentVideo.id}
+        switchCurrentVideo={switchVideo}
+        videoData={videoData}
+        sideVideoData={sideVideos}
+      />
+    </>
+  );
 };
 
 export default Home;
-

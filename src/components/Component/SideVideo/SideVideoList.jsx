@@ -8,7 +8,6 @@ function SideVideoList({ videoData, currentVideoId, switchCurrentVideo }) {
       <h4 className="sideVideoList__header">NEXT VIDEOS</h4>
       <div className="sideVideoList__content">
         <div className="sideVideoList__heroDetails">
-          {/* Render your HeroDetails component here */}
         </div>
         <div className="sideVideoList__videos">
           {videoData

@@ -2,21 +2,26 @@
 @use '../../../styles/partials/variables' as *;
 
 .video__container {
+    border-top: .15rem solid $color-mercury;
+    margin-top: 1rem;
     @include desktop {
         display: flex;
         flex-direction: row;
+        
     }
 }
 
 .video__info {
     margin-top: 1.5rem;
-    border-top: .15rem solid $color-mercury;
+   
 
     @include tablet {
         margin-top: .5rem;
     }
     @include desktop {
-        width: 100vw;
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
 
     &-text {
@@ -70,22 +75,23 @@
 .video__form {
     flex: 1;
     margin-left: 2rem;
-
+  
     @include tablet {
-        border-bottom: .15rem solid $color-mercury;
-        width: 90vw;
+      border-bottom: .15rem solid $color-mercury;
+      width: 90vw;
     }
-
+  
     @include desktop {
-        margin-top: 8.5rem;
-        margin-left: -44rem;
-        border-bottom: none;
+      margin-top: 8rem;
+      margin-left: -40rem;
+      border-bottom: none;
     }
 
     &-title {
         font-size: 1rem;
         color: $color-silver;
         margin-top: 1rem;
+        width: 46rem;
     }
 
     &-input {
